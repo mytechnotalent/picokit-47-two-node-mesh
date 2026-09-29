@@ -1,0 +1,68 @@
+{
+  "repo": "picokit-47-two-node-mesh",
+  "eyebrow": "PICOKIT // LESSON 47",
+  "title": "PICOKIT // TWO NODE MESH",
+  "subtitle": "TWO-NODE RELAY + AUTHENTICATED HEARTBEAT",
+  "accent": "#FF2100",
+  "dim": "#9E1400",
+  "white": "#F3D7DB",
+  "cyan": "#7FD8E0",
+  "bg": "#110200",
+  "bg_edge": "#050000",
+  "icon": "wifi",
+  "panel_status": "MESH  ·  RELAY 1  ·  AEAD :ON",
+  "chips": [
+    {
+      "label": "NODE",
+      "value": "ORIGIN"
+    },
+    {
+      "label": "PEER",
+      "value": "RELAY"
+    },
+    {
+      "label": "KEY",
+      "value": "argon2id"
+    },
+    {
+      "label": "RADIO",
+      "value": "-41 dBm"
+    }
+  ],
+  "terminal": [
+    "$ gateway listen /dev/cu.usbserial-A50285BI",
+    "[*] node 00047  seq 9  HEARTBEAT  AEAD ok",
+    "[*] peer 00046  frame authenticated  forwarded",
+    "[+] relay count 1  rssi -41  snr 8.0",
+    "[+] anti-replay window ok  counter 9"
+  ],
+  "categories": [
+    "MESH",
+    "RELAY",
+    "SECURE",
+    "LINK"
+  ],
+  "cards": [
+    {
+      "tag": "NODE-47",
+      "label": "origin",
+      "value": "5 s"
+    },
+    {
+      "tag": "PEER-46",
+      "label": "relay",
+      "value": "auth"
+    },
+    {
+      "tag": "HUB-01",
+      "label": "forward",
+      "value": "aead"
+    }
+  ],
+  "footer": [
+    "2 NODES  ·  1 HUB  ·  RELAY AUTHENTICATED  ·  NO PLAINTEXT",
+    "PICOKIT SERIES  ·  OUTPUT  ·  INPUT  ·  RADIO  ==[ MESH ]=="
+  ],
+  "layout": "split",
+  "stat": "ORIGIN"
+}
